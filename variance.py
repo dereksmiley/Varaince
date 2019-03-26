@@ -16,7 +16,7 @@ data = [
 
 print("First".ljust(9, " ") +  "Last".ljust(9, " ") + "Variance".ljust(10, " ") +  "Percent In Change" + '\n')
 firstTotal = 0
-secondTotal = 0
+lastTotal = 0
 varainceTotal = 0
 changePercentTotal = 0
 
@@ -24,7 +24,7 @@ for obj in data:
   firstNum =  int(obj['first'])
   lastNum = int(obj['last'])
   firstTotal += firstNum
-  secondTotal += lastNum
+  lastTotal += lastNum
   variance = firstNum - lastNum
   changePercent = variance / firstNum  * 100
 
@@ -36,9 +36,9 @@ for obj in data:
 
   print(str(firstNum).ljust(9, " ") +  str(lastNum).ljust(9, " ") + varianceString.ljust(10, " ") +  str(round(changePercent, 2)) + '\n')
 
-varainceTotal = firstTotal - secondTotal
+varainceTotal = firstTotal - lastTotal
 changePercentTotal = varainceTotal / firstTotal * 100
 print("Totals")
 print("First".ljust(9, " ") +  "Last".ljust(9, " ") + "Variance".ljust(10, " ") +  "Percent In Change" )
-print(str(firstTotal).ljust(9, " ") +  str(secondTotal).ljust(9, " ") + str(varainceTotal).ljust(10, " ") +  str(round(changePercentTotal, 2)) + '\n')
+print(str(firstTotal).ljust(9, " ") +  str(lastTotal).ljust(9, " ") + str(varainceTotal).ljust(10, " ") +  str(round(changePercentTotal, 2)) + '\n')
 
