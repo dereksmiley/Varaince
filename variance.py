@@ -14,7 +14,7 @@ data = [
 ]
 
 
-print("Frist".ljust(9, " ") +  "Last".ljust(9, " ") + "Varaince".ljust(10, " ") +  "Percent In Change" + '\n')
+print("First".ljust(9, " ") +  "Last".ljust(9, " ") + "Variance".ljust(10, " ") +  "Percent In Change" + '\n')
 firstTotal = 0
 secondTotal = 0
 varainceTotal = 0
@@ -39,6 +39,6 @@ for obj in data:
 varainceTotal = firstTotal - secondTotal
 changePercentTotal = varainceTotal / firstTotal * 100
 print("Totals")
-print("Frist".ljust(9, " ") +  "Last".ljust(9, " ") + "Varaince".ljust(10, " ") +  "Percent In Change" )
+print("First".ljust(9, " ") +  "Last".ljust(9, " ") + "Variance".ljust(10, " ") +  "Percent In Change" )
 print(str(firstTotal).ljust(9, " ") +  str(secondTotal).ljust(9, " ") + str(varainceTotal).ljust(10, " ") +  str(round(changePercentTotal, 2)) + '\n')
 
